@@ -1,0 +1,1588 @@
+{
+	"info": {
+		"_postman_id": "5c4d660d-71e7-4f88-bfa6-9194b4ae2e0c",
+		"name": "Shipany",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Omran",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "Alsahar",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "+9631122336",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12312312",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12312312",
+									"type": "default"
+								},
+								{
+									"key": "role_ids[]",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "role_ids[]",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone",
+									"value": "123123123",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjhlOTk5YWYzZjAxZGJmYTExM2I3MjcyZjIzM2Y2ZTMyZjJlZWI0ZWFkZmFlZDRhNjA3MzMyZTRkODljYmUyOWY5YWM1YTA0NDllNGNhNjQiLCJpYXQiOjE2NzcwODY2MzYuMzkwNDI1LCJuYmYiOjE2NzcwODY2MzYuMzkwNDI5LCJleHAiOjE3MDg2MjI2MzYuMzg2NDY3LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.WQb3GQuA1CPEvbomNzAhd4t4z3jaqCmFYveiRS0Ef0pua7wakDjbWLF8mfgS0qyJY8u_NXTl7O9wz0JFo8N4KSb9LpKSwwjMcNEEy4lY_ilAGqstoMN6JwYocoOddaBZ65ccqOHSIZ4mRL7PVkPljvUKUkywYX-dNNmJvgEra5XOG15xv-XfCihdQEzl_giBGBx5Mpxbt105EMbaxA1yNV5xcLhHb4LorGJptdPo7_RxqHbDcwxeOAIZNOM__Vs-lLfqs9xoKlEKFfOsD7Xr9fmfAMPfSGjr532p6d9IvuDcKmaskiHHzctfLvIFr3qHBDiD3aiSnoQltTozI0iqgKYO6xUC8yuxX03_TFr8y0_2Bh8VXU6aDrePzksjikZRqxhg-xB6ah3z211fmvyp5DQNuIarA0tx4kLw4k_Y2wf9Wxa9kz3n1IiZOE96knaiGng6t5PzCdhDTWEZRw-xNblAjxjst9c6fZp4gihyP4SP9ikCA1pmNv2_uz3ekelOeBN4Bpybbv4BvJjCrn8v7--tREtpS353JYMWD8WgqpeHKGvumZ_F5gDe0YTCf498Yeq2PU1l4nbHCGnonZ8avNi7IE8wmfh-3BdMy99_baCQC64OMDozLgz5theXil82nGy9obFwHJoii7rQDHeSgdg-AEgX7jd69kMlpQvoqzc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGY1OWE4ZWY1M2ZkM2RkNzk2MWJmZThjOTlmMDU5ODRmN2E3MjE0YmUwMjkyY2YxNmQyMGI2NTgxNmQxODg0M2JiM2Y1NzEzNjRjOTY1N2IiLCJpYXQiOjE2NzcwODcyNjYuNjU4MzE1LCJuYmYiOjE2NzcwODcyNjYuNjU4MzIsImV4cCI6MTcwODYyMzI2Ni42NTUwMjEsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.eStBE_DvMb96uBoeX8lA3ZJYXeLZYyqI_fkP9t6pK0U49MLwrpf9fGbOo3F_-hF7ZrFDzJNAgjh2sEjjXhcELEW9--khHfX0unep2SmfZHliegNe5hiTo0XBiM0DbE5-SgP2_Ila9p0bmAX35q7brgj5GAT83WDMnzg95_7tMFqtQSu9-NbomS0N3k1dvi1RgT5TvrgVEzw3Lnk5jyFKU-_Duj1hTUlbFTvVtDaLADHDHaJl5ZZJe94kcThG3U_h-8F0MX5Ri73se1H4hPXIZCRLPnkXNAgNo6IjICf-MtJup_ihENZAtLE0eVLFQ7wAIyKpihn0RbfEvLqw8VBlCWFckMJ3Xb1edefzXyMONKR8KjVx3I4reYrG9qC62OsP5JgauFT5PuAZFSvYJCtz9LY8Xy3U9TkXAf-Zd_ca1ulddX9YktWcUqfMShcss6lsgYEEMJ-_Z_LyUhfYBuyqkfD_fScqllVzXDUp5VjagC5DSFq4cBywFC7i2xf9slVtnpT_-S30iKb7m53-8OFJdUkjLInwBuVPI_BWwsu710HseTsRXdl_KrEYh5O1AmTBRvgzquqWaDVY3GGEp0uuZYU5YJYQ9QWRXzeMAKPR3kkG2rJ0yphg4uSuQ5f1jsDoqFKeaSnnYEqowggtVfppJF_pPZyVxZ_sSbAeNIBhd2M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "12312312",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete_user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete_user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Guest",
+			"item": [
+				{
+					"name": "All Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Student by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/student/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top 3 Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjE3YmMyZjY5OGU4MGNjMTczZmFlYzdlYjQxMDdmMDFlZTE5NDExNTI3M2M5ZTU5ZWFhYjZmMTg2NWYwMjNhZDgxZGM5OTcwMWQ2MjJmYmUiLCJpYXQiOjE2NzQyMTY3OTYuMzg4NDg3LCJuYmYiOjE2NzQyMTY3OTYuMzg4NDkzLCJleHAiOjE3MDU3NTI3OTYuMzg0NTM4LCJzdWIiOiIxNSIsInNjb3BlcyI6W119.WvqO4Bqg5_XZcZiB1ceO0RrdMvUkwJtkpAF9-ZMMmYCxUUKvPeVxS9nFRhTcr6Q-pgwBxkTS_lbFD2P59c-n_7ZF478V3rXdAYpTX5UalxkdSK55yGmnBrE02l_C2Kcx4V_7-qRtjJPROo5NJLO3CP_aDYB0l73lLIGm846Nffq2ya8-OqmfpvtnhuxTrPyyLq702opYfW_idM26TWiJTQJWgBCtj4LUw1a1weTfi3a86WOWU05OM10vGvYZhKj-fYY8lwLuyxmHWuJDyCN0OY2uc5F7dAKpx_TEvfla5jS6gLCP4Mn5TaQoJYSPYZaBZRz_alBHLN14Q0_9b4jIDxVAt4c_tTjWxvBP_RRUOFi95xj0LTY4ifriJaP_LvVpHMevTqTyyosgIziOHdd1jOBktc0C6xcfh_-Nb6Qg5eR_SSXrUpsUHg7iYAEoP446QOYtTcEtWUG8QCaSrDCCh-VrDFxvtyrvV_sSvwFB-i1LYjACVWpem3R84HUz6kwHV1-qksSIAm7FLj-VbKJkR6sb1nEj5LncrRTiCeKVhanyTj0sAsT98oo_jHN1v8escqS2vuX9-ImN2-WeVFPTMwCE22XUb6MM756M2kF2nB_ZVRikJJ9vvAPOkdBaacRP81yfygxRTFVp3yXGmeZfDE3f4eDs7Ppw16iLd_s2-iM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Teachers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/teachers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Teacher by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/teacher/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"teacher",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Father",
+			"item": [
+				{
+					"name": "Father's Accepted Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTQwMDI4N2FmMDg4NjllODc0MmRmZThlMmZkZDk0Zjg3NWI4ZDI0ZWM2Nzc1NGZlNTZjYjdhYTk2NGU1NjNmMzI1NWYyOTg4YWM1MDIzNWQiLCJpYXQiOjE2NzQzMzMzOTQuOTkwMzcsIm5iZiI6MTY3NDMzMzM5NC45OTAzNzIsImV4cCI6MTcwNTg2OTM5NC45ODY4NTEsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.DsR497e7amHOyQv27dSYY1cGecMGQVyAnvNpdbAi7c7uEhyCuoN8Ew5PPQJLmzSdgkXwbEoSFrvaVktPcAPhlpu-BBkpESiy5N6gGp85hEyprgamBrKu4Q-F8C6-5R9HIS1o0MRcvBh3cBlMQNOtjxAhfX2OMb5wb1kwV8XJhStfNWmvHWg6NRHekAxXDQkaHRIFhN3BQISbAeQKCLDQGRpND1hxDdvf1xtxAZDuPOWMup9sAC-sVtXYqK7TgFy25Wp4t2ZC8MK6cEihwiOiSpUSm7A38ZDz-fO2Xzcz-tri56UXsAyVMQy_Uis3edsdxE5biSGrt35barAr9o6WcPEuCehV_Nmqv98peuYHC6M_VqoNjI4u4CQw1jKb28L8BqAYN5-yIrinFG6hQ88jnyYKwHS3rpShwfPKkgp5LciGOLmyOxgbDWbmTGdtp_4qbK-3EjsqidOM1P-RmsEmo0SEQToh4XdBXpc3B_zpmFbw4aS8lsUGmrY_IvmA8IPJnz2uiAoCKPOvtua0cBtfv3rnaPkn36g1Eb_YzwhcFUpwNiiWMwE_ssZ7FpDcl93PAJQU8BGDXaF_Y8--JlRrUDfXROahaZjkYPW2K_g8nueU3IpoHejtn7gdAG47il0F8-ZILTc8VZCecRdIVpOWRiKxvAZbOpog3KVP2OyU9Gw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/father_accepted_students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"father_accepted_students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Father's pending students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTQwMDI4N2FmMDg4NjllODc0MmRmZThlMmZkZDk0Zjg3NWI4ZDI0ZWM2Nzc1NGZlNTZjYjdhYTk2NGU1NjNmMzI1NWYyOTg4YWM1MDIzNWQiLCJpYXQiOjE2NzQzMzMzOTQuOTkwMzcsIm5iZiI6MTY3NDMzMzM5NC45OTAzNzIsImV4cCI6MTcwNTg2OTM5NC45ODY4NTEsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.DsR497e7amHOyQv27dSYY1cGecMGQVyAnvNpdbAi7c7uEhyCuoN8Ew5PPQJLmzSdgkXwbEoSFrvaVktPcAPhlpu-BBkpESiy5N6gGp85hEyprgamBrKu4Q-F8C6-5R9HIS1o0MRcvBh3cBlMQNOtjxAhfX2OMb5wb1kwV8XJhStfNWmvHWg6NRHekAxXDQkaHRIFhN3BQISbAeQKCLDQGRpND1hxDdvf1xtxAZDuPOWMup9sAC-sVtXYqK7TgFy25Wp4t2ZC8MK6cEihwiOiSpUSm7A38ZDz-fO2Xzcz-tri56UXsAyVMQy_Uis3edsdxE5biSGrt35barAr9o6WcPEuCehV_Nmqv98peuYHC6M_VqoNjI4u4CQw1jKb28L8BqAYN5-yIrinFG6hQ88jnyYKwHS3rpShwfPKkgp5LciGOLmyOxgbDWbmTGdtp_4qbK-3EjsqidOM1P-RmsEmo0SEQToh4XdBXpc3B_zpmFbw4aS8lsUGmrY_IvmA8IPJnz2uiAoCKPOvtua0cBtfv3rnaPkn36g1Eb_YzwhcFUpwNiiWMwE_ssZ7FpDcl93PAJQU8BGDXaF_Y8--JlRrUDfXROahaZjkYPW2K_g8nueU3IpoHejtn7gdAG47il0F8-ZILTc8VZCecRdIVpOWRiKxvAZbOpog3KVP2OyU9Gw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/father_pending_students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"father_pending_students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmMxZDE2M2NlMzI2MDA2Nzg3NzA5OWU4M2MzYjIxODk0YzBjNWNjZDkyYTIxZjhjMmZjNGZkMzU0MTk0YmI0MjI4ZTFkZWQ2YzYwNDBiMjEiLCJpYXQiOjE2NzcwODg0ODkuMTk2NTcsIm5iZiI6MTY3NzA4ODQ4OS4xOTY1NzUsImV4cCI6MTcwODYyNDQ4OS4xOTM2MTIsInN1YiI6IjI3Iiwic2NvcGVzIjpbXX0.rR5K5iwZTtIgFgH_eB-5aCvC9OKiuhWVEsAuYzQqb9kw_Aqm4CRq_W3TfXMzxH54VOI2kWWYktBkFTwhfwclDvs9CnVVDSrc0Un5LLe_oTa6mn78cVLRYpCJTgP3tsyyJSC9vW6_BtURPx9_XpSyDtJ4NPNxKTURDeDkj9aC8n4SlU8DsbubftX8mwest9ThDbZvqeCjuqGY8oFDv0_HbhKx0Wv7aXEQwMEPi2IuNJyGOr-F4YQY-kQia8vA-_vxpET7k7efIr1IKiUOQIz1sBh89gcM-3_EeHU8mEhfoG-Y0eFlq4t_hxT3boOwUEw2nDEfEzEB8E18ILfugbFan4hsrwAb7WHHV50-NEjATd7AvjPzK75CY9jaUw387nS40cX8likpDSLSosP_9eJufROnKKYcBdwllymRGBwcw1Tp4Ar95qyFsyCKHangEFXJZ5AkMfXugp5_vMVTIK6_1HFwM0DnWgcYqiKv0uRABjdtXBXQ2-IVDhd_7p9yfzNop2AI5ZoV0lxXWkiez0GX8h9I9Q8Thb36oQD7C5mukCM03XCUY53m0dWC-RgPnvPDLz-dQhTnD5XpV1DdZa3QwsvrdcLS53qJN9TDeYeqv3MEbT3jiU4zC6f8yMJL88FmujFCL7HVho41260ddsFcfzLQAQ8zT211RLw_X43BqUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Adel",
+									"type": "default"
+								},
+								{
+									"key": "score",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "class",
+									"value": "4",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjE3YmMyZjY5OGU4MGNjMTczZmFlYzdlYjQxMDdmMDFlZTE5NDExNTI3M2M5ZTU5ZWFhYjZmMTg2NWYwMjNhZDgxZGM5OTcwMWQ2MjJmYmUiLCJpYXQiOjE2NzQyMTY3OTYuMzg4NDg3LCJuYmYiOjE2NzQyMTY3OTYuMzg4NDkzLCJleHAiOjE3MDU3NTI3OTYuMzg0NTM4LCJzdWIiOiIxNSIsInNjb3BlcyI6W119.WvqO4Bqg5_XZcZiB1ceO0RrdMvUkwJtkpAF9-ZMMmYCxUUKvPeVxS9nFRhTcr6Q-pgwBxkTS_lbFD2P59c-n_7ZF478V3rXdAYpTX5UalxkdSK55yGmnBrE02l_C2Kcx4V_7-qRtjJPROo5NJLO3CP_aDYB0l73lLIGm846Nffq2ya8-OqmfpvtnhuxTrPyyLq702opYfW_idM26TWiJTQJWgBCtj4LUw1a1weTfi3a86WOWU05OM10vGvYZhKj-fYY8lwLuyxmHWuJDyCN0OY2uc5F7dAKpx_TEvfla5jS6gLCP4Mn5TaQoJYSPYZaBZRz_alBHLN14Q0_9b4jIDxVAt4c_tTjWxvBP_RRUOFi95xj0LTY4ifriJaP_LvVpHMevTqTyyosgIziOHdd1jOBktc0C6xcfh_-Nb6Qg5eR_SSXrUpsUHg7iYAEoP446QOYtTcEtWUG8QCaSrDCCh-VrDFxvtyrvV_sSvwFB-i1LYjACVWpem3R84HUz6kwHV1-qksSIAm7FLj-VbKJkR6sb1nEj5LncrRTiCeKVhanyTj0sAsT98oo_jHN1v8escqS2vuX9-ImN2-WeVFPTMwCE22XUb6MM756M2kF2nB_ZVRikJJ9vvAPOkdBaacRP81yfygxRTFVp3yXGmeZfDE3f4eDs7Ppw16iLd_s2-iM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Moh",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/student/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjE3YmMyZjY5OGU4MGNjMTczZmFlYzdlYjQxMDdmMDFlZTE5NDExNTI3M2M5ZTU5ZWFhYjZmMTg2NWYwMjNhZDgxZGM5OTcwMWQ2MjJmYmUiLCJpYXQiOjE2NzQyMTY3OTYuMzg4NDg3LCJuYmYiOjE2NzQyMTY3OTYuMzg4NDkzLCJleHAiOjE3MDU3NTI3OTYuMzg0NTM4LCJzdWIiOiIxNSIsInNjb3BlcyI6W119.WvqO4Bqg5_XZcZiB1ceO0RrdMvUkwJtkpAF9-ZMMmYCxUUKvPeVxS9nFRhTcr6Q-pgwBxkTS_lbFD2P59c-n_7ZF478V3rXdAYpTX5UalxkdSK55yGmnBrE02l_C2Kcx4V_7-qRtjJPROo5NJLO3CP_aDYB0l73lLIGm846Nffq2ya8-OqmfpvtnhuxTrPyyLq702opYfW_idM26TWiJTQJWgBCtj4LUw1a1weTfi3a86WOWU05OM10vGvYZhKj-fYY8lwLuyxmHWuJDyCN0OY2uc5F7dAKpx_TEvfla5jS6gLCP4Mn5TaQoJYSPYZaBZRz_alBHLN14Q0_9b4jIDxVAt4c_tTjWxvBP_RRUOFi95xj0LTY4ifriJaP_LvVpHMevTqTyyosgIziOHdd1jOBktc0C6xcfh_-Nb6Qg5eR_SSXrUpsUHg7iYAEoP446QOYtTcEtWUG8QCaSrDCCh-VrDFxvtyrvV_sSvwFB-i1LYjACVWpem3R84HUz6kwHV1-qksSIAm7FLj-VbKJkR6sb1nEj5LncrRTiCeKVhanyTj0sAsT98oo_jHN1v8escqS2vuX9-ImN2-WeVFPTMwCE22XUb6MM756M2kF2nB_ZVRikJJ9vvAPOkdBaacRP81yfygxRTFVp3yXGmeZfDE3f4eDs7Ppw16iLd_s2-iM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "old_password",
+									"value": "12312312",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/student/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "All Books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWJmM2NjNTcyZjYxNTczZWVhODYzNmU4ZmMxNDYwNTAwNWExOTM2NjE5ZDFkYWIxNmUwZTMzNDIwZjY4ZmFhODFmOTk3NTRjM2ZiOWY5ZGEiLCJpYXQiOjE2NzQzMjExNTIuMDE0MTc5LCJuYmYiOjE2NzQzMjExNTIuMDE0MTgzLCJleHAiOjE3MDU4NTcxNTIuMDAxNTc0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JeXUXChq8WJtEq1f_Klaae3QVjfEQ1MtCxrfwDkasp40x3Kc7CVNnL7AzsA6bcmAd3Tw8nChGGiSRGP6S0HwaNZG0BgkOCydx1YuKmZa4CGGcnojhtzcpfwnrkQHi8sU_prF0q_rZgpl90vUx5ESZB3tI6QYcV4sYWMU8XF9LxDHEp9Eb8MpPkOIUUKEo0ZnQHLLNijn5d-PQBSuzvABiSenJeqoOmw2yLrlLQHuX5b5X8HGdcanqjVNBnVVUzxyZ1wLv0GecSagnGHdfmFEQxFQk0-398o-RcPDbte-OOBTYm_zQ-LGfGEj_72NmMf4apLZboDEadsFOVbgPUrOgOuyJ1t2N1i7zUY1waqfBFEhvrjZIsGT8Oh2ncMMZJFwyqZab6md5kRXyaJRQ8dKvko2WhaR8_uk-SILxaFHx6yGuInDb4z3saexYGtr_N6G8UNssvVlHn33i7TUjBasBzLKj1FRQfbBzz_Nh9VruKebCi5yGKxG8FZ005acXon6tZ3alVhoz-eW25NPG42AVc3iVClL3bzstONAy02_ofBViyS6jFJv9aYtKxlevqQG4vF5MM9E6scdqksLTv_YHjtUVwnmsE_MLWr5J03gOnN_pGDFhQ7VBMDVCoZ-pgrUmrj_uqBIX9p4jNxj9gD-17TnQTp9wszNWueLy_IkZwE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Book by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4OWYwYjMxYmZhNjE1OTY2MDFkNWRkZjI5ZGYzYTk2OWJjMmUzZTJhNDc4ZGUwN2FkODA4OTNlNWM2OTVhOWYwMmU3OWU0OGRhNmVmMmMiLCJpYXQiOjE2NzQyOTE2ODguNjc0NjU0LCJuYmYiOjE2NzQyOTE2ODguNjc0NjYsImV4cCI6MTcwNTgyNzY4OC42Njg2MTYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.ldtoXksvShSOBqKdUveWI5bFbqo_UTa5UrtxLOLv3xU70MQ06Zf4mHbCJeDwAd1z8D_-96AeGhyCKeBd_lSKNwfnKsXFiLpPcbc14SNHjaMGs425B-0QI0ft5TM-JtZlwlyqDXXFNy6L7O23hgqwhF2zEjtC8eV49Ix6uNnxA8YfV1nOTw56EYSd3pf-_mbQs0CzChH9t-AW3SQ_2KYUmGu1Z5aoQTiBkA2c_lLW4J2yW2qXqlrvAzk0e6gpxxDX6WviuaOGnZ8-mO1DXOZ8omO0k4Penj2GV1_ZpkGkGoU-zPi1-BcSpr5KqIdQK5LbufDw0lcx2Lb_fX7SWWpmdVpIfUNlU_Cs2oUHtnCzrWWBrDPWKPuo6JVEg5ie0WMDg_NlZJpzkp9ZeMEeNlKPDgoNFfXddFlbPf_VsfmYKwXilgMUGEiPft3FktZ00xF2qvTKC59Li75W4hrojO0z063HqMDK2rUWx_0YcEtRVmW9fMdDmrMaCSRH95d-oM1HBUOijGio-JoCkvx3XtCWCLcKxxbeSrnBXTtkt0vuvqqV3BXR7xov9gbZyJRKLubAz-ajFeAI6NyuAKtiyI79XSWXGr5TW8e3yHIJZV_qCfL_ilLUT0AYhM9zr4QLc0FE83FE0PjXS-OqaTfTNHxczcb7ETLnjNYDUOMnfIPfauU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Sera",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "afjafhkjahfjk hajkshf jkahsjkfajkh k",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Qusai/Pictures/Screenshots/Screenshot (12).png"
+								},
+								{
+									"key": "url",
+									"value": "http://www.test.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWJmM2NjNTcyZjYxNTczZWVhODYzNmU4ZmMxNDYwNTAwNWExOTM2NjE5ZDFkYWIxNmUwZTMzNDIwZjY4ZmFhODFmOTk3NTRjM2ZiOWY5ZGEiLCJpYXQiOjE2NzQzMjExNTIuMDE0MTc5LCJuYmYiOjE2NzQzMjExNTIuMDE0MTgzLCJleHAiOjE3MDU4NTcxNTIuMDAxNTc0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JeXUXChq8WJtEq1f_Klaae3QVjfEQ1MtCxrfwDkasp40x3Kc7CVNnL7AzsA6bcmAd3Tw8nChGGiSRGP6S0HwaNZG0BgkOCydx1YuKmZa4CGGcnojhtzcpfwnrkQHi8sU_prF0q_rZgpl90vUx5ESZB3tI6QYcV4sYWMU8XF9LxDHEp9Eb8MpPkOIUUKEo0ZnQHLLNijn5d-PQBSuzvABiSenJeqoOmw2yLrlLQHuX5b5X8HGdcanqjVNBnVVUzxyZ1wLv0GecSagnGHdfmFEQxFQk0-398o-RcPDbte-OOBTYm_zQ-LGfGEj_72NmMf4apLZboDEadsFOVbgPUrOgOuyJ1t2N1i7zUY1waqfBFEhvrjZIsGT8Oh2ncMMZJFwyqZab6md5kRXyaJRQ8dKvko2WhaR8_uk-SILxaFHx6yGuInDb4z3saexYGtr_N6G8UNssvVlHn33i7TUjBasBzLKj1FRQfbBzz_Nh9VruKebCi5yGKxG8FZ005acXon6tZ3alVhoz-eW25NPG42AVc3iVClL3bzstONAy02_ofBViyS6jFJv9aYtKxlevqQG4vF5MM9E6scdqksLTv_YHjtUVwnmsE_MLWr5J03gOnN_pGDFhQ7VBMDVCoZ-pgrUmrj_uqBIX9p4jNxj9gD-17TnQTp9wszNWueLy_IkZwE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Moh",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWJmM2NjNTcyZjYxNTczZWVhODYzNmU4ZmMxNDYwNTAwNWExOTM2NjE5ZDFkYWIxNmUwZTMzNDIwZjY4ZmFhODFmOTk3NTRjM2ZiOWY5ZGEiLCJpYXQiOjE2NzQzMjExNTIuMDE0MTc5LCJuYmYiOjE2NzQzMjExNTIuMDE0MTgzLCJleHAiOjE3MDU4NTcxNTIuMDAxNTc0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JeXUXChq8WJtEq1f_Klaae3QVjfEQ1MtCxrfwDkasp40x3Kc7CVNnL7AzsA6bcmAd3Tw8nChGGiSRGP6S0HwaNZG0BgkOCydx1YuKmZa4CGGcnojhtzcpfwnrkQHi8sU_prF0q_rZgpl90vUx5ESZB3tI6QYcV4sYWMU8XF9LxDHEp9Eb8MpPkOIUUKEo0ZnQHLLNijn5d-PQBSuzvABiSenJeqoOmw2yLrlLQHuX5b5X8HGdcanqjVNBnVVUzxyZ1wLv0GecSagnGHdfmFEQxFQk0-398o-RcPDbte-OOBTYm_zQ-LGfGEj_72NmMf4apLZboDEadsFOVbgPUrOgOuyJ1t2N1i7zUY1waqfBFEhvrjZIsGT8Oh2ncMMZJFwyqZab6md5kRXyaJRQ8dKvko2WhaR8_uk-SILxaFHx6yGuInDb4z3saexYGtr_N6G8UNssvVlHn33i7TUjBasBzLKj1FRQfbBzz_Nh9VruKebCi5yGKxG8FZ005acXon6tZ3alVhoz-eW25NPG42AVc3iVClL3bzstONAy02_ofBViyS6jFJv9aYtKxlevqQG4vF5MM9E6scdqksLTv_YHjtUVwnmsE_MLWr5J03gOnN_pGDFhQ7VBMDVCoZ-pgrUmrj_uqBIX9p4jNxj9gD-17TnQTp9wszNWueLy_IkZwE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "All Sessions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sessions",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Session by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4OWYwYjMxYmZhNjE1OTY2MDFkNWRkZjI5ZGYzYTk2OWJjMmUzZTJhNDc4ZGUwN2FkODA4OTNlNWM2OTVhOWYwMmU3OWU0OGRhNmVmMmMiLCJpYXQiOjE2NzQyOTE2ODguNjc0NjU0LCJuYmYiOjE2NzQyOTE2ODguNjc0NjYsImV4cCI6MTcwNTgyNzY4OC42Njg2MTYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.ldtoXksvShSOBqKdUveWI5bFbqo_UTa5UrtxLOLv3xU70MQ06Zf4mHbCJeDwAd1z8D_-96AeGhyCKeBd_lSKNwfnKsXFiLpPcbc14SNHjaMGs425B-0QI0ft5TM-JtZlwlyqDXXFNy6L7O23hgqwhF2zEjtC8eV49Ix6uNnxA8YfV1nOTw56EYSd3pf-_mbQs0CzChH9t-AW3SQ_2KYUmGu1Z5aoQTiBkA2c_lLW4J2yW2qXqlrvAzk0e6gpxxDX6WviuaOGnZ8-mO1DXOZ8omO0k4Penj2GV1_ZpkGkGoU-zPi1-BcSpr5KqIdQK5LbufDw0lcx2Lb_fX7SWWpmdVpIfUNlU_Cs2oUHtnCzrWWBrDPWKPuo6JVEg5ie0WMDg_NlZJpzkp9ZeMEeNlKPDgoNFfXddFlbPf_VsfmYKwXilgMUGEiPft3FktZ00xF2qvTKC59Li75W4hrojO0z063HqMDK2rUWx_0YcEtRVmW9fMdDmrMaCSRH95d-oM1HBUOijGio-JoCkvx3XtCWCLcKxxbeSrnBXTtkt0vuvqqV3BXR7xov9gbZyJRKLubAz-ajFeAI6NyuAKtiyI79XSWXGr5TW8e3yHIJZV_qCfL_ilLUT0AYhM9zr4QLc0FE83FE0PjXS-OqaTfTNHxczcb7ETLnjNYDUOMnfIPfauU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sessions/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sessions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjkwMDMwODE5OThiMzM2NmJmMjIzZDM3YjY4ZTEzNjVhMWE2OGNmYzgzMzg3YWFjNTgxZTVlODIxNzY4ZTU4M2Y3MTU4NzRhMzE0NTY0MzEiLCJpYXQiOjE2NzcwODc5NDIuODc5NjU5LCJuYmYiOjE2NzcwODc5NDIuODc5NjY0LCJleHAiOjE3MDg2MjM5NDIuODc2OTI3LCJzdWIiOiIyNiIsInNjb3BlcyI6W119.NGT8CUMGztfB7HKt6TXbC5Ya6KMEWVJGz7Pm2ud2vWZFXPEnHhfbl6a30XV1jFyToLDqE4vaTvLG7Fvv-z4OjvMKDQ5dhkGiuuVpp6kYM75TlUeIS1GIdoWlAqLYt7ZYBaHE6RfVoyLzFpkSnYmtMAFPX_1JxQtz-a-JCggUjDoK9TFNA-jzhyDNE1a_J0O5tMmhHRCx9d16Yns9g_0Xfd4MstpzublGWmj6TCDk6rOD4ymbfjHCD5fY3HrWXdEddUM08fNVCd_7F7XW6JVHGCGxSyFsANDn_6tdFL8_tsjiBYyyAuYuZJznWH408urGUtkgXeatxHKhOsL6OVmKTkKpAVKnzYwAFwt3wMPeaV5zleHM-MJUmmpy9LKwX9rXmwojgibSwMgk4LxFPMtzhlHA7PQZEyD_f7rVJM-FhZ76msSqGkYI9GoDeTggpreacIEYsABLxfYcnTtMXf0gG2-U9BQuu1K22pcDB5zGZ3hcvwD-em8G4GODVN3t26If1BGClANEd1wGbn0wp8TV9nLqlPEEnU8JjgtanllPwi70ooZIShL5IvFf5Vv9MjLY6ALawGAZjbhn46NzBzvrqawLNr7aL9KoJg1R3UJwbHXIKqzWLFpo6iN6CMYsWElLusQJTK_twqjWnrN_7vsz4aXodqQxeYbqspCy7uY2ibY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sessions",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjkwMDMwODE5OThiMzM2NmJmMjIzZDM3YjY4ZTEzNjVhMWE2OGNmYzgzMzg3YWFjNTgxZTVlODIxNzY4ZTU4M2Y3MTU4NzRhMzE0NTY0MzEiLCJpYXQiOjE2NzcwODc5NDIuODc5NjU5LCJuYmYiOjE2NzcwODc5NDIuODc5NjY0LCJleHAiOjE3MDg2MjM5NDIuODc2OTI3LCJzdWIiOiIyNiIsInNjb3BlcyI6W119.NGT8CUMGztfB7HKt6TXbC5Ya6KMEWVJGz7Pm2ud2vWZFXPEnHhfbl6a30XV1jFyToLDqE4vaTvLG7Fvv-z4OjvMKDQ5dhkGiuuVpp6kYM75TlUeIS1GIdoWlAqLYt7ZYBaHE6RfVoyLzFpkSnYmtMAFPX_1JxQtz-a-JCggUjDoK9TFNA-jzhyDNE1a_J0O5tMmhHRCx9d16Yns9g_0Xfd4MstpzublGWmj6TCDk6rOD4ymbfjHCD5fY3HrWXdEddUM08fNVCd_7F7XW6JVHGCGxSyFsANDn_6tdFL8_tsjiBYyyAuYuZJznWH408urGUtkgXeatxHKhOsL6OVmKTkKpAVKnzYwAFwt3wMPeaV5zleHM-MJUmmpy9LKwX9rXmwojgibSwMgk4LxFPMtzhlHA7PQZEyD_f7rVJM-FhZ76msSqGkYI9GoDeTggpreacIEYsABLxfYcnTtMXf0gG2-U9BQuu1K22pcDB5zGZ3hcvwD-em8G4GODVN3t26If1BGClANEd1wGbn0wp8TV9nLqlPEEnU8JjgtanllPwi70ooZIShL5IvFf5Vv9MjLY6ALawGAZjbhn46NzBzvrqawLNr7aL9KoJg1R3UJwbHXIKqzWLFpo6iN6CMYsWElLusQJTK_twqjWnrN_7vsz4aXodqQxeYbqspCy7uY2ibY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sessions/61",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sessions",
+								"61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorite Books",
+			"item": [
+				{
+					"name": "Show Students By Book ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4OWYwYjMxYmZhNjE1OTY2MDFkNWRkZjI5ZGYzYTk2OWJjMmUzZTJhNDc4ZGUwN2FkODA4OTNlNWM2OTVhOWYwMmU3OWU0OGRhNmVmMmMiLCJpYXQiOjE2NzQyOTE2ODguNjc0NjU0LCJuYmYiOjE2NzQyOTE2ODguNjc0NjYsImV4cCI6MTcwNTgyNzY4OC42Njg2MTYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.ldtoXksvShSOBqKdUveWI5bFbqo_UTa5UrtxLOLv3xU70MQ06Zf4mHbCJeDwAd1z8D_-96AeGhyCKeBd_lSKNwfnKsXFiLpPcbc14SNHjaMGs425B-0QI0ft5TM-JtZlwlyqDXXFNy6L7O23hgqwhF2zEjtC8eV49Ix6uNnxA8YfV1nOTw56EYSd3pf-_mbQs0CzChH9t-AW3SQ_2KYUmGu1Z5aoQTiBkA2c_lLW4J2yW2qXqlrvAzk0e6gpxxDX6WviuaOGnZ8-mO1DXOZ8omO0k4Penj2GV1_ZpkGkGoU-zPi1-BcSpr5KqIdQK5LbufDw0lcx2Lb_fX7SWWpmdVpIfUNlU_Cs2oUHtnCzrWWBrDPWKPuo6JVEg5ie0WMDg_NlZJpzkp9ZeMEeNlKPDgoNFfXddFlbPf_VsfmYKwXilgMUGEiPft3FktZ00xF2qvTKC59Li75W4hrojO0z063HqMDK2rUWx_0YcEtRVmW9fMdDmrMaCSRH95d-oM1HBUOijGio-JoCkvx3XtCWCLcKxxbeSrnBXTtkt0vuvqqV3BXR7xov9gbZyJRKLubAz-ajFeAI6NyuAKtiyI79XSWXGr5TW8e3yHIJZV_qCfL_ilLUT0AYhM9zr4QLc0FE83FE0PjXS-OqaTfTNHxczcb7ETLnjNYDUOMnfIPfauU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/favorite_books/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorite_books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Books By Student ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4OWYwYjMxYmZhNjE1OTY2MDFkNWRkZjI5ZGYzYTk2OWJjMmUzZTJhNDc4ZGUwN2FkODA4OTNlNWM2OTVhOWYwMmU3OWU0OGRhNmVmMmMiLCJpYXQiOjE2NzQyOTE2ODguNjc0NjU0LCJuYmYiOjE2NzQyOTE2ODguNjc0NjYsImV4cCI6MTcwNTgyNzY4OC42Njg2MTYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.ldtoXksvShSOBqKdUveWI5bFbqo_UTa5UrtxLOLv3xU70MQ06Zf4mHbCJeDwAd1z8D_-96AeGhyCKeBd_lSKNwfnKsXFiLpPcbc14SNHjaMGs425B-0QI0ft5TM-JtZlwlyqDXXFNy6L7O23hgqwhF2zEjtC8eV49Ix6uNnxA8YfV1nOTw56EYSd3pf-_mbQs0CzChH9t-AW3SQ_2KYUmGu1Z5aoQTiBkA2c_lLW4J2yW2qXqlrvAzk0e6gpxxDX6WviuaOGnZ8-mO1DXOZ8omO0k4Penj2GV1_ZpkGkGoU-zPi1-BcSpr5KqIdQK5LbufDw0lcx2Lb_fX7SWWpmdVpIfUNlU_Cs2oUHtnCzrWWBrDPWKPuo6JVEg5ie0WMDg_NlZJpzkp9ZeMEeNlKPDgoNFfXddFlbPf_VsfmYKwXilgMUGEiPft3FktZ00xF2qvTKC59Li75W4hrojO0z063HqMDK2rUWx_0YcEtRVmW9fMdDmrMaCSRH95d-oM1HBUOijGio-JoCkvx3XtCWCLcKxxbeSrnBXTtkt0vuvqqV3BXR7xov9gbZyJRKLubAz-ajFeAI6NyuAKtiyI79XSWXGr5TW8e3yHIJZV_qCfL_ilLUT0AYhM9zr4QLc0FE83FE0PjXS-OqaTfTNHxczcb7ETLnjNYDUOMnfIPfauU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/student/favorite_books/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"student",
+								"favorite_books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book To Favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmMxZDE2M2NlMzI2MDA2Nzg3NzA5OWU4M2MzYjIxODk0YzBjNWNjZDkyYTIxZjhjMmZjNGZkMzU0MTk0YmI0MjI4ZTFkZWQ2YzYwNDBiMjEiLCJpYXQiOjE2NzcwODg0ODkuMTk2NTcsIm5iZiI6MTY3NzA4ODQ4OS4xOTY1NzUsImV4cCI6MTcwODYyNDQ4OS4xOTM2MTIsInN1YiI6IjI3Iiwic2NvcGVzIjpbXX0.rR5K5iwZTtIgFgH_eB-5aCvC9OKiuhWVEsAuYzQqb9kw_Aqm4CRq_W3TfXMzxH54VOI2kWWYktBkFTwhfwclDvs9CnVVDSrc0Un5LLe_oTa6mn78cVLRYpCJTgP3tsyyJSC9vW6_BtURPx9_XpSyDtJ4NPNxKTURDeDkj9aC8n4SlU8DsbubftX8mwest9ThDbZvqeCjuqGY8oFDv0_HbhKx0Wv7aXEQwMEPi2IuNJyGOr-F4YQY-kQia8vA-_vxpET7k7efIr1IKiUOQIz1sBh89gcM-3_EeHU8mEhfoG-Y0eFlq4t_hxT3boOwUEw2nDEfEzEB8E18ILfugbFan4hsrwAb7WHHV50-NEjATd7AvjPzK75CY9jaUw387nS40cX8likpDSLSosP_9eJufROnKKYcBdwllymRGBwcw1Tp4Ar95qyFsyCKHangEFXJZ5AkMfXugp5_vMVTIK6_1HFwM0DnWgcYqiKv0uRABjdtXBXQ2-IVDhd_7p9yfzNop2AI5ZoV0lxXWkiez0GX8h9I9Q8Thb36oQD7C5mukCM03XCUY53m0dWC-RgPnvPDLz-dQhTnD5XpV1DdZa3QwsvrdcLS53qJN9TDeYeqv3MEbT3jiU4zC6f8yMJL88FmujFCL7HVho41260ddsFcfzLQAQ8zT211RLw_X43BqUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/favorite_books/1/45",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorite_books",
+								"1",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book From Favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmMxZDE2M2NlMzI2MDA2Nzg3NzA5OWU4M2MzYjIxODk0YzBjNWNjZDkyYTIxZjhjMmZjNGZkMzU0MTk0YmI0MjI4ZTFkZWQ2YzYwNDBiMjEiLCJpYXQiOjE2NzcwODg0ODkuMTk2NTcsIm5iZiI6MTY3NzA4ODQ4OS4xOTY1NzUsImV4cCI6MTcwODYyNDQ4OS4xOTM2MTIsInN1YiI6IjI3Iiwic2NvcGVzIjpbXX0.rR5K5iwZTtIgFgH_eB-5aCvC9OKiuhWVEsAuYzQqb9kw_Aqm4CRq_W3TfXMzxH54VOI2kWWYktBkFTwhfwclDvs9CnVVDSrc0Un5LLe_oTa6mn78cVLRYpCJTgP3tsyyJSC9vW6_BtURPx9_XpSyDtJ4NPNxKTURDeDkj9aC8n4SlU8DsbubftX8mwest9ThDbZvqeCjuqGY8oFDv0_HbhKx0Wv7aXEQwMEPi2IuNJyGOr-F4YQY-kQia8vA-_vxpET7k7efIr1IKiUOQIz1sBh89gcM-3_EeHU8mEhfoG-Y0eFlq4t_hxT3boOwUEw2nDEfEzEB8E18ILfugbFan4hsrwAb7WHHV50-NEjATd7AvjPzK75CY9jaUw387nS40cX8likpDSLSosP_9eJufROnKKYcBdwllymRGBwcw1Tp4Ar95qyFsyCKHangEFXJZ5AkMfXugp5_vMVTIK6_1HFwM0DnWgcYqiKv0uRABjdtXBXQ2-IVDhd_7p9yfzNop2AI5ZoV0lxXWkiez0GX8h9I9Q8Thb36oQD7C5mukCM03XCUY53m0dWC-RgPnvPDLz-dQhTnD5XpV1DdZa3QwsvrdcLS53qJN9TDeYeqv3MEbT3jiU4zC6f8yMJL88FmujFCL7HVho41260ddsFcfzLQAQ8zT211RLw_X43BqUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/favorite_books/1/45",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorite_books",
+								"1",
+								"45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "All Pending Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/all_pending_users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"all_pending_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Pending Teachers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/all_pending_teachers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"all_pending_teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Pending Fathers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWJkZTdiZTRjZDM1ZTgxMmRjMDFlYzRhNDczYWZlOWJkNjc0OWFkMmZkYjI0ZGM4ZDNjYjdkNjM2YzkyN2UwYzhiMjQxNWU1YTNiMzY3ZjAiLCJpYXQiOjE2NzQyOTI5OTMuNDI0NDExLCJuYmYiOjE2NzQyOTI5OTMuNDI0NDE2LCJleHAiOjE3MDU4Mjg5OTMuNDIwMzc5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.MXbur2vG6UkRU9YVcg2gnqNiRvuYSwIQFSPruhp8f5cVo_Fz1xUyEqaWABrUn4mtKLTQSkO45lAbWPjuM0E7kwp1pMwP4VXE_Wfmkc2SJ2kes1PwE3xHGb_1XFT5BrOM36dF-TX4H9dGb_YFgtFBmYVUcPNj8OgRJEyna_QuDfmrdQkijPYl37YwwSZPIMjJjVLPqZZF-b3aNj1MZkZqo8frwA6aHGjHmTA1mb8oyyQIdoPBQBO_bnPdlB1aOJvCmXx9RNNBdJqPx0BAtMdJmBBEtj6M9CZ0rx9dy7gwAMzdK2dYKvDPKeBMGEZ8oecUYPtk5EP9Rc2GSvbeTVwF0scG2-hqmlb9DpYWT6aO6IyyNyUGaI0cT0loqHLLc6zX03OSUpbkPkLXv18euTmGTDfmoQayffaLQuHQxH2w9oIn2O4lq4dy6niMHlax149dy0AZPB-RGTTGc4jsAdLld3USE0923UbNFFSYbsGX1tBxR3wZDoW7voEVob3ruKgRcWb-GdCv0EYwIJU2T5JxkpRglD-nCVDr1nAyhdQmgv8IyvDja6AvEwkWtm_mcz9u2nxT9LtvyMr2j00BSoKcJcn5KEd9pGSnOmBQ7MSkKx6ulTdpjU0GK3oLEy5bO195xzbsm2ZecDxgmLNX46q5_UebtRSC9KjvYj4zM5MSQhs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/all_pending_fathers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"all_pending_fathers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Pending Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/all_pending_students",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"all_pending_students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "teacher_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "first_name",
+									"value": "Qusai",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "score",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "class",
+									"value": "3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accept_student/45",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accept_student",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Qusai",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "Armoush",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accept_user/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accept_user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWJkZTdiZTRjZDM1ZTgxMmRjMDFlYzRhNDczYWZlOWJkNjc0OWFkMmZkYjI0ZGM4ZDNjYjdkNjM2YzkyN2UwYzhiMjQxNWU1YTNiMzY3ZjAiLCJpYXQiOjE2NzQyOTI5OTMuNDI0NDExLCJuYmYiOjE2NzQyOTI5OTMuNDI0NDE2LCJleHAiOjE3MDU4Mjg5OTMuNDIwMzc5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.MXbur2vG6UkRU9YVcg2gnqNiRvuYSwIQFSPruhp8f5cVo_Fz1xUyEqaWABrUn4mtKLTQSkO45lAbWPjuM0E7kwp1pMwP4VXE_Wfmkc2SJ2kes1PwE3xHGb_1XFT5BrOM36dF-TX4H9dGb_YFgtFBmYVUcPNj8OgRJEyna_QuDfmrdQkijPYl37YwwSZPIMjJjVLPqZZF-b3aNj1MZkZqo8frwA6aHGjHmTA1mb8oyyQIdoPBQBO_bnPdlB1aOJvCmXx9RNNBdJqPx0BAtMdJmBBEtj6M9CZ0rx9dy7gwAMzdK2dYKvDPKeBMGEZ8oecUYPtk5EP9Rc2GSvbeTVwF0scG2-hqmlb9DpYWT6aO6IyyNyUGaI0cT0loqHLLc6zX03OSUpbkPkLXv18euTmGTDfmoQayffaLQuHQxH2w9oIn2O4lq4dy6niMHlax149dy0AZPB-RGTTGc4jsAdLld3USE0923UbNFFSYbsGX1tBxR3wZDoW7voEVob3ruKgRcWb-GdCv0EYwIJU2T5JxkpRglD-nCVDr1nAyhdQmgv8IyvDja6AvEwkWtm_mcz9u2nxT9LtvyMr2j00BSoKcJcn5KEd9pGSnOmBQ7MSkKx6ulTdpjU0GK3oLEy5bO195xzbsm2ZecDxgmLNX46q5_UebtRSC9KjvYj4zM5MSQhs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete_student/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete_student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTI5ZDViMTk3ZjIyODQzOTcxMThkYzNmM2M3N2E4YzVmNzY0YjQ1MDBjZWRhNGJjMGJlNjM2ZDUxZjg0NWY5ZTBmN2MzNWExMmNkZmI3ODkiLCJpYXQiOjE2NzcwODc1MzcuNzA2NTM0LCJuYmYiOjE2NzcwODc1MzcuNzA2NTM5LCJleHAiOjE3MDg2MjM1MzcuNzA0MTU4LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.XUx1eg9ZdNLIMXvp5MMjkLGTBmxgZwyMsXBhrOSjhAlRY6qGCOAcd_4rrP2Bf5R05wbeiBUzqwhbjI7kcLSh3EAHumAd-qdTu2MOCCvpNFmy_JNTYZbFF_Sh1cCqlBYfdPC4cAuT-pNfA08xtRNHrYKMfOcdINRE0-aFQrBaCDPNIvZtfqdwq8AlSNP1XVkpurkgMwTVVivXJs0qVv2Y9f43JP1l4eRFdPvQGwqtY01FV6NEQS1yZsCyzYmwosBIUwQkvt67JFMf4kd8IeDPezlMdvrtLTvXd4-moscErf4QqYpGFqa0rTk2lUJTjrpRQHgp1KJWUuZzgT7yxItAwWTq4NVKqzXo_-NaRA2RO6SUtkeiknVK26TV57rrnryn1biz7961JWLAgexa4QjtAvwHPEZXChM07WJ1tN586WQ3Lhd1urLavMTTFMDjmXXee5P62IoTKJazV0cvutM9RFW3WjqTnRjNnOYRDeoEiM5XcMpTvHQcvM7NXCB-NTO_s0KHUjfHXDKiEMN3aP1Q-B4XKACuZQga8E8hrWGI7WP0qsDCjFCjNE6KwtQ64begNbnvS3FMEkb3K2_0Jx9sQVcEp1kuLTZt5OXBhKqi-Sb4lJHLXyurN5YPKmID_lflRQ8oyTgvE8Z2O_5eum7jr1ixf2ydmtEjKYEoWMsui80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete_user/24",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete_user",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
